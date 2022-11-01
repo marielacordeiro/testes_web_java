@@ -17,29 +17,51 @@ Basicamente tivemos a ideia de testar alguns Bad Requests, visando eles serem es
 >> - Entrada: Falta do parametro valor
 >> - Resultado: 400 e Required request parameter 'valor' for method parameter type Double is not present
 
-Depois foi testado a funcionalidade padrão da aplicação, para ver que estava tudo certo, foi feito uma série de testes sobre isso. OBS: Tal caso de teste seria usado no método de jurosSimples, para conseguir os casos do jurosComposta basta modificar o segundo parâmetro para true.
+Depois foi testado a funcionalidade padrão da aplicação, para ver que estava tudo certo, foi feito uma série de testes sobre isso.
 
 <br />
 
-> #### Casos de teste
+> #### Casos de teste --> JurosSimples
 >
->> - Entradas: true, false, 120, 0.02, 6, 148.8, 24.8
->> - Resultado: 200 e true, false, 120, 0.02, 6, 148.8, 24.8
+>> Entradas: true, false, 120, 0.02, 6, 148.8, 24.8
+>> Resultado: 200 e true, false, 120, 0.02, 6, 148.8, 24.8
 >
->> - Entradas: true, false, 339000, 0.50, 2, 705120.0, 352560.0
->> - Resultado: 200 e true, false, 339000, 0.50, 2, 705120.0, 352560.0
+>> Entradas: true, false, 339000, 0.50, 2, 705120.0, 352560.0
+>> Resultado: 200 e true, false, 339000, 0.50, 2, 705120.0, 352560.0
 >
->> - Entradas: true, false, 0.88, 0.12, 1, 1.0472, 1.0472
->> - Resultado: 200 e true, false, 0.88, 0.12, 1, 1.0472, 1.0472
+>> Entradas: true, false, 0.88, 0.12, 1, 1.0472, 1.0472
+>> Resultado: 200 e true, false, 0.88, 0.12, 1, 1.0472, 1.0472
 >
->> - Entradas: true, false, 5600, 0.5, 17, 54488.0, 3205.176470588235
->> - Resultado: 200 e true, false, 5600, 0.5, 17, 54488.0, 3205.176470588235
+>> Entradas: true, false, 5600, 0.5, 17, 54488.0, 3205.176470588235
+>> Resultado: 200 e true, false, 5600, 0.5, 17, 54488.0, 3205.176470588235
 >
->> - Entradas: true, false, 0, 0.04, 1, 0, 0
->> - Resultado: 200 e true, false, 0, 0.04, 1, 0, 0
+>> Entradas: true, false, 0, 0.04, 1, 0, 0
+>> Resultado: 200 e true, false, 0, 0.04, 1, 0, 0
 >
->> - Entradas: true, false, 10, 2, 2, 50.8, 25.4
->> - Resultado: 200 e true, true, false, 10, 2, 2, 50.8, 25.4
+>> Entradas: true, false, 10, 2, 2, 50.8, 25.4
+>> Resultado: 200 e true, true, false, 10, 2, 2, 50.8, 25.4
+
+<br />
+
+> #### Casos de teste --> JurosComposto
+>
+>> Entradas: true, true, 120, 0.02, 6, 150.48627558348, 25.08104593058
+>> Resultado: 200 e true, true, 120, 0.02, 6, 150.48627558348, 25.08104593058
+>
+>> Entradas: true, true, 339000, 0.50, 2, 793293.9, 396646.95
+>> Resultado: 200 e true, true, 339000, 0.50, 2, 793293.9, 396646.95
+>
+>> Entradas: true, true, 0.88, 0.12, 1, 1.0472, 1.0472
+>> Resultado: 200 e true, true, 0.88, 0.12, 1, 1.0472, 1.0472
+>
+>> Entradas: true, true, 5600, 0.5, 17, 6177599.554130504, 363388.20906650025
+>> Resultado: 200 e true, true, 5600, 0.5, 17, 6177599.554130504, 363388.20906650025
+>
+>> Entradas: true, false, 0, 0.04, 1, 0, 0
+>> Resultado: 200 e true, false, 0, 0.04, 1, 0, 0
+>
+>> Entradas: true, true, 10, 2, 2, 91.20099999999998, 45.60049999999999
+>> Resultado: 200 e true, true, 10, 2, 2, 91.20099999999998, 45.60049999999999
 
 ### Outro teste
 
@@ -47,3 +69,4 @@ Depois foi testado a funcionalidade padrão da aplicação, para ver que estava 
 
 
 ### Outro teste
+
