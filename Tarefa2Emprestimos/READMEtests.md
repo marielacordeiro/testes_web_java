@@ -63,10 +63,26 @@ Depois foi testado a funcionalidade padrão da aplicação, para ver que estava 
 >> Entradas: true, true, 10, 2, 2, 91.20099999999998, 45.60049999999999
 >> Resultado: 200 e true, true, 10, 2, 2, 91.20099999999998, 45.60049999999999
 
-### Outro teste
+### Testes Unitários da classe Calcula Juros
 
+Sendo uma classe simples de testar, apenas testamos os diferentes comportamentos possíveis de cada método de calcular juros para simular os resultados esperados de cada um quando há seguro e quando não há.
 
+> #### Casos de teste - Juros Simples
+>
+>> Entradas: 5.00, 0.05, 3, com seguro
+>> 
+>> Resultado: 0.9000000000000001
+>
+>> Entradas: 5.00, 0.05, 3, sem seguro
+>> 
+>> Resultado: 0.75
 
-
-### Outro teste
-
+> #### Casos de teste - Juros Compostos
+>
+>> Entradas: 5.00, 0.05, 3, com seguro
+>>
+>> Resultado: 0.9550799999999997
+>
+>> Entradas: 5.00, 0.05, 3, sem seguro
+>>
+>> Resultado: 0.788125
