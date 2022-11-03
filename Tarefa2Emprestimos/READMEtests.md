@@ -1,7 +1,7 @@
 # Descrição dos casos de teste
 
 
-### Teste de integração
+### Teste de Sistema
 Basicamente tivemos a ideia de testar alguns Bad Requests, visando eles serem específicos para a falta de alguns dos parâmetros requisitados, mostrando assim seu resultado como 400 e tendo suas áreas de erros, possuindo assim suas respectivas mensagens. Foram criados dois métodos de teste englobando essa situação: uma para o jurosComposto e outro para o jurosSimples. 
 
 <br />
@@ -86,3 +86,220 @@ Sendo uma classe simples de testar, apenas testamos os diferentes comportamentos
 >> Entradas: 5.00, 0.05, 3, sem seguro
 >>
 >> Resultado: 0.788125
+
+# Descrição dos casos de teste
+
+
+### Teste da Classe Emprestimo
+Basicamente tivemos que testar a classe emprestimo que dependia da classe CalculoDeJuros, então criamos um Mock para fazer um duble da classe calculo de juros e poder efetuar as operações da mesma como desejassemos.
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Simples
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 4660.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 8563.14
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 287118.06
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Simples Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 4560.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 8258.04
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 275278.14
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Compostos
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 21706.569678409818
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 35614.12421491493
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 429111.4065172286
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Compostos Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 20166.55586861808
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 31459.921882708655
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 392751.23035234027
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Simples
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 466.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 570.876
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 35889.7575
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Simples Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 456.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 550.5360000000001
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 34409.7675
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Compostos
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 2170.656967840982
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 2374.2749476609956
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 43743.65317255382
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Compostos Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 2016.6555868618082
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 2097.3281255139104
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 40766.11753639878
+
+### Teste de Integração
+Basicamente tivemos que testar a classe emprestimo que dependia da classe CalculoDeJuros, porém desta vez utilizamos as classes reais ao invés de mocks para que elas sejam testadas em conjunto e ver se tudo funciona como o esperado
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Simples
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 4660.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 8563.14
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 287118.06
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Simples Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 4560.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 8258.04
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 275278.14
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Compostos
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 21706.569678409818
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 35614.12421491493
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 429111.4065172286
+
+<br />
+
+> #### Casos de teste --> Custo Total Juros Compostos Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 20166.55586861808
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 31459.921882708655
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 392751.23035234027
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Simples
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 466.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 570.876
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 35889.7575
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Simples Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 456.0
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 550.5360000000001
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 34409.7675
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Compostos
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 2170.656967840982
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 2374.2749476609956
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 43743.65317255382
+
+<br />
+
+> #### Casos de teste --> Valor Parcela Juros Compostos Sem Seguro
+>
+>> Entradas: 1000, 0.35, 10
+>> Resultado: 2016.6555868618082
+>
+>> Entradas: 2034, 0.2, 15
+>> Resultado: 2097.3281255139104
+>
+>> Entradas: 147999, 0.1, 8
+>> Resultado: 40766.11753639878
